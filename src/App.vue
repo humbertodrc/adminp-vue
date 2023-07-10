@@ -1,7 +1,10 @@
 <script setup>
+  import  Header from './components/Header.vue'
 </script>
 
 <template>
-  <h1 class="text-6xl">Hello World</h1>
+  <div class="container mx-auto mt-5">
+    <Header />
+  </div>
 </template>
 
