@@ -1,5 +1,11 @@
-<script>
-  
+<script setup>
+import { ref } from 'vue'
+const nombre = ref('Max')
+
+// Segunda opcion para leer el valor del input
+// const leerNombre = e => {
+//   nombre.value = e.target.value
+// }
 </script>
 
 <template>
@@ -9,6 +15,7 @@
 
     <!-- Formulario -->
     <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
+      {{ nombre }}
       <!-- Nombre -->
       <div class="mb-5">
         <label 
@@ -22,6 +29,8 @@
           id="mascota"
           placeholder="Nombre Mascota"
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
+          @input="(e) => nombre = e.target.value"
+          :value="nombre"
         >
       </div>
       <!-- Propietario -->
