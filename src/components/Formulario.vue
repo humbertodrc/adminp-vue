@@ -1,11 +1,7 @@
 <script setup>
 import { ref } from 'vue'
-const nombre = ref('Max')
+const nombre = ref('')
 
-// Segunda opcion para leer el valor del input
-// const leerNombre = e => {
-//   nombre.value = e.target.value
-// }
 </script>
 
 <template>
@@ -29,8 +25,7 @@ const nombre = ref('Max')
           id="mascota"
           placeholder="Nombre Mascota"
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
-          @input="(e) => nombre = e.target.value"
-          :value="nombre"
+          v-model="nombre"
         >
       </div>
       <!-- Propietario -->
