@@ -24,6 +24,54 @@
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
         >
       </div>
+      <!-- Propietario -->
+      <div class="mb-5">
+        <label 
+          for="propietario"
+          class="block text-gray-700 uppercase font-bold mb-2"
+        >
+          Nombre Propietario
+        </label>
+        <input 
+          type="text"
+          id="propietario"
+          placeholder="Nombre Propietario"
+          class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
+        >
+      </div>
+      <!-- Fecha Alta -->
+      <div class="mb-5">
+        <label 
+          for="alta"
+          class="block text-gray-700 uppercase font-bold mb-2"
+        >
+          Fecha Alta
+        </label>
+        <input 
+          type="date"
+          id="alta"
+          class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
+        >
+      </div>
+      <!-- Sintomas -->
+      <div class="mb-5">
+        <label 
+          for="sintomas"
+          class="block text-gray-700 uppercase font-bold mb-2"
+        >
+          Síntomas
+        </label>
+        <textarea 
+          id="sintomas"
+          placeholder="Describe los sintomas"
+          class="border-2 w-full p-2 placeholder-gray-400 rounded-md h-40"/>
+      </div>
+
+      <input 
+        type="submit" 
+        value="Registrar Paciente"
+        class="bg-indigo-600 w-full hover:bg-indigo-700 text-white uppercase font-bold p-3 rounded-md cursor-pointer transition-colors"
+      >
     </form>
   </div>
 </template>
