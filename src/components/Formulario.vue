@@ -1,6 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-const nombre = ref('')
+import { reactive } from 'vue'
+const paciente = reactive({
+  nombre: '',
+  propietario: '',
+  fecha: '',
+  sintomas: ''
+})
 
 </script>
 
@@ -11,7 +16,6 @@ const nombre = ref('')
 
     <!-- Formulario -->
     <form class="bg-white shadow-md rounded-lg py-10 px-5 mb-10">
-      {{ nombre }}
       <!-- Nombre -->
       <div class="mb-5">
         <label 
@@ -25,7 +29,7 @@ const nombre = ref('')
           id="mascota"
           placeholder="Nombre Mascota"
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
-          v-model="nombre"
+          v-model="paciente.nombre"
         >
       </div>
       <!-- Propietario -->
@@ -41,6 +45,7 @@ const nombre = ref('')
           id="propietario"
           placeholder="Nombre Propietario"
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
+          v-model="paciente.propietario"
         >
       </div>
       <!-- Fecha Alta -->
@@ -55,6 +60,7 @@ const nombre = ref('')
           type="date"
           id="alta"
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
+          v-model="paciente.fecha"
         >
       </div>
       <!-- Sintomas -->
@@ -68,7 +74,9 @@ const nombre = ref('')
         <textarea 
           id="sintomas"
           placeholder="Describe los sintomas"
-          class="border-2 w-full p-2 placeholder-gray-400 rounded-md h-40"/>
+          class="border-2 w-full p-2 placeholder-gray-400 rounded-md h-40"
+          v-model="paciente.sintomas"
+          />
       </div>
 
       <input 
