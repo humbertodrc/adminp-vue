@@ -3,6 +3,7 @@ import { reactive } from 'vue'
 const paciente = reactive({
   nombre: '',
   propietario: '',
+  email: '',
   fecha: '',
   sintomas: ''
 })
@@ -46,6 +47,22 @@ const paciente = reactive({
           placeholder="Nombre Propietario"
           class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
           v-model="paciente.propietario"
+        >
+      </div>
+      <!-- Email -->
+      <div class="mb-5">
+        <label 
+          for="email"
+          class="block text-gray-700 uppercase font-bold mb-2"
+        >
+          Nombre Propietario
+        </label>
+        <input 
+          type="email"
+          id="email"
+          placeholder="Email Propietario"
+          class="border-2 w-full p-2 placeholder-gray-400 rounded-md"
+          v-model="paciente.email"
         >
       </div>
       <!-- Fecha Alta -->
