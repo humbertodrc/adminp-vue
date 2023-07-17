@@ -9,8 +9,9 @@ const paciente = reactive({
 })
 
 const validar = () => {
-
-  
+  if (Object.values(paciente).includes('')) {
+    return;
+  }
 }
 
 </script>
